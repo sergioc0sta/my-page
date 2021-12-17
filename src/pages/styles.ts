@@ -4,6 +4,8 @@ injectGlobal`
 :root {
   --backgroundHeader: #282a36;
   --backgroundBody: #383a59;
+  --heightHeader: 10vh;
+  --heightMainComponent: 100vh;
 }
 html {
   -ms-text-size-adjust: 100%;
@@ -26,4 +28,8 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+
+  @media (max-width: 600px) {  
+    h1 {font-size:1.7rem;}
+  }
 }`

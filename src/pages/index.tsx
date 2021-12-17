@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import styled from '@emotion/styled'
 import './styles'
 
-import Home from '../components/home2'
+import Summary from '../components/summary'
 
 const Primeira = styled.div`
   background: red;
@@ -24,7 +24,7 @@ height: 20vh;`
 
 const IndexPage = () => (
   <Layout>
-    <Home />
+    <Summary />
   </Layout>
 )
 
