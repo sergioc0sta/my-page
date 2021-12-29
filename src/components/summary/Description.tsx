@@ -17,7 +17,6 @@ const DescriptionLayout2 = styled.div`
     }
 `;
 
-
 const Description = () =>{
     const data = useStaticQuery(graphql`query getDataSummary{
         markdownRemark(fileAbsolutePath: {regex: "/summary.md/"}) {
