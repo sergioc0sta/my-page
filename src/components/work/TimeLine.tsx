@@ -5,7 +5,6 @@ const TimeLine = styled.section`
   width: 90%;
   max-width: 1080px;
   margin: 0 auto;
-  background: #2B343A;
   padding: 0 10%;
   border-radius: 2px;
   position: relative;

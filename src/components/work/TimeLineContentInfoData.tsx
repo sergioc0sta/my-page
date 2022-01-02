@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import TimeLineContentInfo from './TimeLineContentInfo';
 
 const TimeLineContentIfoData = styled.span`
     width: calc(50% - 2px);

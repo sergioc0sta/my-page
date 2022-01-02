@@ -2,8 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import ContentSkills from './ContentSkills';
 
-const ContentSkillItem = styled(ContentSkills)`
-  & > li {
+const ContentSkillItem = styled.li`
     background: #40484D;
     border-radius: 2px;
     display: inline-block;
@@ -12,7 +11,6 @@ const ContentSkillItem = styled(ContentSkills)`
     margin: 3px 2px;
     text-align: center; 
     flex-grow: 1;
-  }
 `;
 
 export default ContentSkillItem;
