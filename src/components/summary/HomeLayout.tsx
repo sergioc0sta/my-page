@@ -1,4 +1,4 @@
-import styled  from '@emotion/styled'
+import styled from '@emotion/styled';
 
 const HomeLayout = styled.div`
     display: flex;
@@ -6,7 +6,7 @@ const HomeLayout = styled.div`
     justify-content: center;
     width: 75%;
     height: 50%;
-    gap:2rem;
+    gap: 2rem;
 
     @media only screen and (max-width: 600px) {
         flex-direction: column;

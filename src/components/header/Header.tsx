@@ -1,22 +1,23 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { HeaderLayout, Title } from './HeaderLayout'
+import React, { useRef, useEffect, useMemo } from 'react';
+import { HeaderBar } from './HeaderBar';
+import { ProgressBar } from './ProgressBar';
+import { ProgressContainer } from './ProgressContainer';
+import { useProgressBar } from './hooks/useProgressBar';
 
-const Header = ({ siteTitle }) => (
-  <HeaderLayout>
-    <div>
-      <Title title={siteTitle}>{siteTitle}</Title>
-    </div>
-  </HeaderLayout>
-    
-)
+const Header = () => {
+    const { scrollHandler } = useProgressBar();
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+    useEffect(() => {
+        return () => (window.onscroll = () => null);
+    }, []);
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+    return (
+        <HeaderBar>
+            <ProgressContainer>
+                <ProgressBar id="progress-bar" loading={scrollHandler} />
+            </ProgressContainer>
+        </HeaderBar>
+    );
+};
 
-export default Header
+export default Header;

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import styled from '@emotion/styled';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const DescriptionLayout = styled.div`
     width: 50%;
@@ -17,26 +17,28 @@ const DescriptionLayout2 = styled.div`
     }
 `;
 
-const Description = () =>{
-    const data = useStaticQuery(graphql`query getDataSummary{
-        markdownRemark(fileAbsolutePath: {regex: "/summary.md/"}) {
-          html
-          frontmatter {
-            title
-            p1
-            p2
-            p3
-          }
+const Description = () => {
+    const data = useStaticQuery(graphql`
+        query getDataSummary {
+            markdownRemark(fileAbsolutePath: { regex: "/summary.md/" }) {
+                html
+                frontmatter {
+                    title
+                    p1
+                    p2
+                    p3
+                }
+            }
         }
-      }`);
-    
-    if(!data){
+    `);
+
+    if (!data) {
         return;
     }
-    
-    const {title, p1, p2, p3} = data?.markdownRemark?.frontmatter
-    
-    return(
+
+    const { title, p1, p2, p3 } = data?.markdownRemark?.frontmatter;
+
+    return (
         <DescriptionLayout>
             <DescriptionLayout2>
                 <h1>{title}</h1>
@@ -45,9 +47,7 @@ const Description = () =>{
                 <p>{p3}</p>
             </DescriptionLayout2>
         </DescriptionLayout>
-    )
-}
+    );
+};
 
-export default Description;
-
-  
+export default Description

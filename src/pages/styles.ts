@@ -1,4 +1,4 @@
-import { injectGlobal } from '@emotion/css'
+import { injectGlobal } from '@emotion/css';
 
 injectGlobal`
 :root {
@@ -32,4 +32,4 @@ body {
   @media (max-width: 600px) {  
     h1 {font-size:1.7rem;}
   }
-}`
+}`;
