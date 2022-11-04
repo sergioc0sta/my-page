@@ -1,8 +1,8 @@
-import * as React from "react"
+import * as React from 'react';
 import Container from '../container';
-import Content from "./Content";
-import Avatar from "./Avatar";
-import Description from "./Description";
+import Content from './Content';
+import Avatar from './Avatar';
+import Description from './Description';
 
 const Summary = () => {
     return (

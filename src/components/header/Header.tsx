@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { ProgressBar } from './ProgressBar';
-import {ProgressContainer} from './ProgressContainer'
+import { ProgressContainer } from './ProgressContainer';
 import { useProgressBar } from './hooks/useProgressBar';
-
 
 const Header = () => {
     const { scrollHandler } = useProgressBar();
@@ -13,10 +12,9 @@ const Header = () => {
 
     return (
         <ProgressContainer>
-            <ProgressBar id="progress-bar" loading={scrollHandler} />        
+            <ProgressBar id="progress-bar" loading={scrollHandler} />
         </ProgressContainer>
     );
-
 };
 
 export default Header;

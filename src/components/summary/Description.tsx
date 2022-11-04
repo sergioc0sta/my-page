@@ -1,43 +1,27 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { useStaticQuery, graphql } from 'gatsby';
-
+import { useSummaryData } from './hooks/useSummaryData';
 
 const Ola = styled.div`
-    width:auto;
+    width: auto;
     margin: 2rem;
-`
-
+`;
 
 const Hendling = styled.h1`
-    display:block;
-    
-`
+    display: block;
+`;
 
 const Oi = styled.p`
-display:block;
+    display: block;
     text-indent: 30px;
     text-align: justify;
     text-justify: inter-word;
-`
+`;
 
-const Description = () =>{
+const Description = () => {
+    const { title, description } = useSummaryData();
 
-    const data = useStaticQuery(graphql`
-        query getDataSummary {
-            markdownRemark(fileAbsolutePath: { regex: "/Summary.md/" }) {
-                html
-                frontmatter {
-                    title
-                    description
-                }
-            }
-        }
-    `);
-
-    const {title, description} = data?.markdownRemark?.frontmatter;
-
-    if(!description && !title){
+    if (!description && !title) {
         return null;
     }
 
@@ -46,8 +30,7 @@ const Description = () =>{
             <Hendling>{title}</Hendling>
             <Oi>{description}</Oi>
         </Ola>
-    )
-}
+    );
+};
 
 export default Description;
-

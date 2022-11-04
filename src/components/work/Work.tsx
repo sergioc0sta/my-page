@@ -1,10 +1,10 @@
-import * as React from "react"
+import * as React from 'react';
 import Container from '../container';
 
 const Work = () => {
     return (
         <Container>
-           <p>work</p>
+            <p>work</p>
         </Container>
     );
 };

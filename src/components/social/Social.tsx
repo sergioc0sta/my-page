@@ -1,10 +1,10 @@
-import * as React from "react"
+import * as React from 'react';
 import Container from '../container';
 
 const Social = () => {
     return (
         <Container>
-           <p>Social</p>
+            <p>Social</p>
         </Container>
     );
 };

@@ -18,8 +18,6 @@ html {
   overflow-y: scroll;
 }
 
-
-
 body {
   background: var(--backgroundBody);
   font-weight: normal;
