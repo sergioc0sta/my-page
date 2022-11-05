@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from '@emotion/styled';
 import { useSummaryData } from './hooks/useSummaryData';
 
@@ -24,7 +23,7 @@ const Oi = styled.p`
     font-weight: bold;
 `;
 
-const Description = () => {
+const Description = (): JSX.Element | null => {
     const { title, description, moreInfo } = useSummaryData();
 
     if (!description && !title) {

@@ -1,6 +1,10 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 
-const useProgressBar = () => {
+interface ScrollHandlerType {
+    scrollHandler: number;
+}
+
+const useProgressBar = (): ScrollHandlerType => {
     const [progress, setProgress] = useState(0);
 
     const scrollCalc = () => {
@@ -9,14 +13,18 @@ const useProgressBar = () => {
         setProgress((winScroll / height) * 100);
     };
 
-    const scrollHandler = useMemo(() => {
-        window.onscroll = () => {
+    const scrollHandler = useMemo(():number => {
+        window.onscroll = ():void => {
             scrollCalc();
         };
         return progress;
     }, [progress]);
 
+    useEffect(() => {
+        return () => (window.onscroll = () => null);
+    }, []);
+
     return { scrollHandler };
 };
 
-export { useProgressBar };
+export default useProgressBar;

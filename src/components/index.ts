@@ -1,6 +1,6 @@
-import Header from './header';
+import {ProgressBar, ProgressContainer} from './progressBar';
 import Main from './main';
 import Summary from './summary';
 import Work from './work';
 import Social from './social';
-export { Header, Main, Summary, Work, Social };
+export { ProgressBar, ProgressContainer, Main, Summary, Work, Social };

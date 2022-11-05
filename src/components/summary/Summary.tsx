@@ -1,9 +1,8 @@
-import * as React from 'react';
 import Container from '../container';
 import Content from './Content';
 import Description from './Description';
 
-const Summary = () => {
+const Summary = (): JSX.Element => {
     return (
         <Container>
             <Content>
