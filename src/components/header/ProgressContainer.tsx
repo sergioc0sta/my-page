@@ -6,7 +6,6 @@ const ProgressContainer = styled.div`
     z-index: 1;
     width: 100vw;
     height: 0.5rem;
-    background: var(--backgroundBody);
 `;
 
 export { ProgressContainer };

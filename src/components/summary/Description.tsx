@@ -35,7 +35,6 @@ const Description = () => {
         <Ola>
             <Hendling>{title}</Hendling>
             <Oi>{description}</Oi>
-
             <Oi start>{moreInfo}</Oi>
         </Ola>
     );

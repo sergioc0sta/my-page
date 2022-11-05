@@ -2,7 +2,7 @@ import { injectGlobal } from '@emotion/css';
 
 injectGlobal`
 :root {
-  --backgroundHeader: #282a36;
+  --backgroundHeader: #634792;
   --backgroundBody: #383a59;
   --heightHeader: 10vh;
   --heightMainComponent: 100vh;

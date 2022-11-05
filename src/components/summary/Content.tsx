@@ -10,21 +10,31 @@ const Content = styled.div`
     border-width: 3px 0px 0px 3px;
     box-shadow: 15px 15px #bd93f9;
 
-    @media screen and (max-width: 1200px) {
-        width: 60%;
-    }
 
-    @media screen and (max-width: 900px) {
-        width: 70%;
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        width: auto;
     }
-
-    @media screen and (min-width: 1800px) {
-        width: 900px;
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        width: 90%;
     }
-
-    @media screen and (max-width: 1800px) {
-        width: 50%;
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        width: 80%;
     }
+    
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        width: 75%;
+    }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        width: 768px;
+    } 
 `;
 
 export default Content;
