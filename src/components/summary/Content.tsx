@@ -19,7 +19,7 @@ const Content = styled.div`
     }
 
     @media screen and (min-width: 1800px) {
-        width: 1080px;
+        width: 900px;
     }
 
     @media screen and (max-width: 1800px) {

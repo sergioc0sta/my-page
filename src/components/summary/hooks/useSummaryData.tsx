@@ -8,6 +8,7 @@ const useSummaryData = () => {
                 frontmatter {
                     title
                     description
+                    moreInfo
                 }
             }
         }

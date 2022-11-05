@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import { StaticImage } from "gatsby-plugin-image"
 
 const Ola = styled.div`
     width: auto;
@@ -9,7 +10,12 @@ const Ola = styled.div`
 const Avatar = () => {
     return (
         <Ola>
-            <p>avatar</p>
+            <StaticImage src="../../images/sergioc0sta.png"  alt="Avtar"
+                placeholder="blurred"
+                layout="fixed"
+                width={150}
+                height={150}
+                />
         </Ola>
     );
 };
