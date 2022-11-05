@@ -1,6 +1,12 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-const useSummaryData = () => {
+interface SummaryDataType {
+    title: string;
+    description: string;
+    moreInfo: string;
+}
+
+const useSummaryData = (): SummaryDataType => {
     const data = useStaticQuery(graphql`
         query SummaryData {
             markdownRemark(fileAbsolutePath: { regex: "/Summary.md/" }) {
@@ -16,4 +22,4 @@ const useSummaryData = () => {
     return data.markdownRemark.frontmatter;
 };
 
-export { useSummaryData };
+export default useSummaryData;

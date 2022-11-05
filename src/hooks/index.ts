@@ -1,3 +1,4 @@
 import useProgressBar from './useProgressBar';
+import useSummaryData from './useSummaryData';
 
-export { useProgressBar }
+export { useProgressBar, useSummaryData }

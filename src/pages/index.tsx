@@ -5,9 +5,9 @@ import { theme } from '../theme/theme';
 import './styles.tsx';
 import { HeaderProvider } from '../context/header';
 
-import { Main, Summary, Work, Social } from '../components';
+import { Main, Work, Social } from '../components';
 
-import { Header } from '../templates';
+import { Header, Summary } from '../templates';
 
 const IndexPage: React.FC = (): JSX.Element => {
     return (

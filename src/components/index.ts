@@ -1,6 +1,10 @@
-import {ProgressBar, ProgressContainer} from './progressBar';
+import { ProgressBar, ProgressContainer } from './progressBar';
 import Main from './main';
-import Summary from './summary';
 import Work from './work';
 import Social from './social';
-export { ProgressBar, ProgressContainer, Main, Summary, Work, Social };
+import Text from './text';
+import Title from './title'
+import { SummaryContent } from './content'
+import Container from './container'
+
+export { ProgressBar, ProgressContainer, Main, Work, Social, Text, Title, SummaryContent, Container };
