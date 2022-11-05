@@ -25,7 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #f2f2f2;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
