@@ -3,7 +3,7 @@ import { injectGlobal } from '@emotion/css';
 injectGlobal`
 :root {
   --backgroundHeader: #634792;
-  --backgroundBody: #383a59;
+  --backgroundBody: #272943;
   --heightHeader: 10vh;
   --heightMainComponent: 100vh;
   --widthxs: 600px;
@@ -25,7 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

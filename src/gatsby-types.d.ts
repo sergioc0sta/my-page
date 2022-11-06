@@ -675,6 +675,7 @@ type FileFieldsEnum =
   | 'childMarkdownRemark.fileAbsolutePath'
   | 'childMarkdownRemark.frontmatter.description'
   | 'childMarkdownRemark.frontmatter.moreInfo'
+  | 'childMarkdownRemark.frontmatter.tags'
   | 'childMarkdownRemark.frontmatter.title'
   | 'childMarkdownRemark.headings'
   | 'childMarkdownRemark.headings.depth'
@@ -810,6 +811,7 @@ type FileFieldsEnum =
   | 'childrenMarkdownRemark.fileAbsolutePath'
   | 'childrenMarkdownRemark.frontmatter.description'
   | 'childrenMarkdownRemark.frontmatter.moreInfo'
+  | 'childrenMarkdownRemark.frontmatter.tags'
   | 'childrenMarkdownRemark.frontmatter.title'
   | 'childrenMarkdownRemark.headings'
   | 'childrenMarkdownRemark.headings.depth'
@@ -1771,6 +1773,7 @@ type MarkdownRemarkFieldsEnum =
   | 'fileAbsolutePath'
   | 'frontmatter.description'
   | 'frontmatter.moreInfo'
+  | 'frontmatter.tags'
   | 'frontmatter.title'
   | 'headings'
   | 'headings.depth'
@@ -1861,12 +1864,14 @@ type MarkdownRemarkFilterListInput = {
 type MarkdownRemarkFrontmatter = {
   readonly description: Maybe<Scalars['String']>;
   readonly moreInfo: Maybe<Scalars['String']>;
+  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly title: Maybe<Scalars['String']>;
 };
 
 type MarkdownRemarkFrontmatterFilterInput = {
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly moreInfo: InputMaybe<StringQueryOperatorInput>;
+  readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -3510,6 +3515,11 @@ type SummaryDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type SummaryDataQuery = { readonly markdownRemark: { readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly description: string | null, readonly moreInfo: string | null } | null } | null };
+
+type WorkDataQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type WorkDataQuery = { readonly markdownRemark: { readonly html: string | null, readonly frontmatter: { readonly tags: ReadonlyArray<string | null> | null } | null } | null };
 
 
 }

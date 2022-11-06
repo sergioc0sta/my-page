@@ -19,8 +19,8 @@ const Summary = (): JSX.Element | null => {
                     `}
                 >
                     <Title>{title}</Title>
-                    <Text>{description}</Text>
-                    <Text start>{moreInfo}</Text>
+                    <Text start>{description}</Text>
+                    <Text>{moreInfo}</Text>
                 </div>
             </SummaryContent>
         </Container>

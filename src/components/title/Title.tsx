@@ -2,10 +2,26 @@ import styled from '@emotion/styled';
 
 const Title = styled.h1`
     font-size: 30px;
-    font-family: 'Concert One';
-    color: #bd93f9;
-    display: block;
+    font-family: ${(props) => props.theme.fonts.title};
+    color: ${(props) => props.theme.colors.orange};
     font-weight: bold;
 `;
 
-export default Title;
+
+const TitleTimeLine = styled(Title)`
+    color: ${(props) => props.theme.colors.orange};
+    margin: 5px 0 25px 5px;
+    position: relative;
+    :before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: ${(props) => props.theme.colors.orange};
+        border-radius: 360px;
+        left: -30px;
+        border: 3px solid ${(props) => props.theme.colors.orange};
+      }
+
+`
+export {Title, TitleTimeLine};

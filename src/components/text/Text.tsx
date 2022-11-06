@@ -6,11 +6,10 @@ interface TextTypes {
 
 const Text = styled.p<TextTypes>`
     display: block;
-    text-indent: ${(props) => `${props?.start ? 0: 30}px`};
-    font-style:  ${(props) => `${props?.start ? 'italic': 'inither'}`};
+    text-indent: ${(props) => `${props?.start ? 30: 0}px`};
     text-align: justify;
-    text-justify: inter-word;
-    font-weight: bold;
+    text-justify:  ${(props) => `${props?.start ? 'inter-word': 'inither'}`};
+    color: ${props => props.theme.colors.primary};
 `;
 
 export default Text;

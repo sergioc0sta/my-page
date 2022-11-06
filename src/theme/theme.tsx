@@ -1,10 +1,11 @@
 const theme = {
     colors: {
-        background: '#634792',
+        purple: '#9555ff',
         blue: '#2d9de5',
         orange: '#f49436',
         sea: '#3bbdbd',
         red: '#e8615d',
+        primary: '#f9f4de'
     },
     breckPoints: {
         small: '600px',
@@ -12,6 +13,10 @@ const theme = {
         large: '992px',
         extraLarge: '1200px',
     },
+    fonts: {
+        primary: 'Open Sans',
+        title: 'Concert One',
+    }
 };
 
 export { theme };

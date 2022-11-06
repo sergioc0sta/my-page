@@ -5,35 +5,40 @@ const SummaryContent = styled.div`
     justify-content: center;
     align-items: center;
     height: auto;
-    border: solid #99ff33;
-    border-radius: 15px 0px;
-    border-width: 3px 0px 0px 3px;
-    box-shadow: 15px 15px #bd93f9;
+    border-radius: 20px;
+    box-shadow: 10px 10px ${(props) => props.theme.colors.orange};
 
     /* Extra small devices (phones, 600px and down) */
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: ${(props) => props.theme.breckPoints.small}) {
         width: auto;
+        border-radius: 0px;
+        box-shadow: none;
     }
 
     /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: ${(props) => props.theme.breckPoints.small}) {
         width: 90%;
     }
 
     /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: ${(props) => props.theme.breckPoints.medium}) {
         width: 80%;
     }
 
     /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: ${(props) => props.theme.breckPoints.large}) {
         width: 75%;
     }
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: ${(props) => props.theme.breckPoints.extraLarge}) {
         width: 768px;
     }
 `;
 
-export { SummaryContent };
+const WorkContent = styled(SummaryContent)`
+    border-radius: none;
+    box-shadow: none;
+`;
+
+export { SummaryContent, WorkContent };

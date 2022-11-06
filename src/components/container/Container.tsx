@@ -8,4 +8,5 @@ const Container = styled.div`
     height: var(--heightMainComponent);
 `;
 
-export default Container;
+
+export default Container ;
