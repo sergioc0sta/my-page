@@ -6,20 +6,21 @@ interface SummaryDataType {
     moreInfo: string;
 }
 
-const useSummaryData = (): SummaryDataType => {
+const useSummaryData = ():SummaryDataType => {
     const data = useStaticQuery(graphql`
         query SummaryData {
-            markdownRemark(fileAbsolutePath: { regex: "/Summary.md/" }) {
-                html
-                frontmatter {
-                    title
-                    description
-                    moreInfo
+            allSummaryJson {
+                edges {
+                    node {
+                        title
+                        description
+                        moreInfo
+                    }
                 }
             }
         }
     `);
-    return data.markdownRemark.frontmatter;
+    return data.allSummaryJson.edges[0].node;
 };
 
 export default useSummaryData;

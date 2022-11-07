@@ -9,7 +9,6 @@ const Title = styled.h1`
 
 
 const TitleTimeLine = styled(Title)`
-    color: ${(props) => props.theme.colors.orange};
     margin: 5px 0 25px 5px;
     position: relative;
     :before {
@@ -17,10 +16,11 @@ const TitleTimeLine = styled(Title)`
         position: absolute;
         width: 10px;
         height: 10px;
-        background: ${(props) => props.theme.colors.orange};
+        background: ${(props) => props.theme.colors.purple};
         border-radius: 360px;
-        left: -30px;
-        border: 3px solid ${(props) => props.theme.colors.orange};
+        left: -46px;
+        top: 10px;
+        border: 3px solid ${(props) => props.theme.colors.purple};
       }
 
 `

@@ -1,22 +1,32 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-interface useWorkData {
-    tags: string[];
-    
+interface WorkDataType {
+    node: WorkDataType__node;
 }
 
-const useWorkData = () => {
+interface WorkDataType__node {
+    title: string
+    dateRange: string
+    description: string
+    resource: string[]
+}
+
+const useWorkData = ():WorkDataType => {
     const data = useStaticQuery(graphql`
         query WorkData {
-            markdownRemark(fileAbsolutePath: { regex: "/Work.md/" }) {
-                html
-                frontmatter {
-                    tags
+            allWorkJson {
+                edges {
+                    node {
+                        title
+                        dateRange
+                        description
+                        resource
+                    }
                 }
             }
         }
     `);
-    return data.markdownRemark.frontmatter;
+    return data.allWorkJson.edges;
 };
 
 export default useWorkData;

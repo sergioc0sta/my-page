@@ -26,7 +26,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #f2f2f2;
   font-family: 'Open Sans';
-  font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";

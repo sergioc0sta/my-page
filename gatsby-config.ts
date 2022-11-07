@@ -15,6 +15,7 @@ const config: GatsbyConfig = {
     // Learn more at: https://gatsby.dev/graphql-typegen
     graphqlTypegen: true,
     plugins: [
+        'gatsby-transformer-json',
         'gatsby-transformer-remark',
         'gatsby-plugin-emotion',
         'gatsby-plugin-image',

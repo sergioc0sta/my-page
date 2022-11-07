@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 const Main = styled.main`
-    height: var(--heightMainComponent);
+    display: flex;
+    flex-direction: column;
+
 `;
 
 export default Main;

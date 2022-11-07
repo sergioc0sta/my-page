@@ -1,35 +1,23 @@
 import styled from '@emotion/styled';
 import { useWorkData } from '../hooks';
-import { Container, WorkContent, Outer, Card, TitleTimeLine, Text } from '../components';
+import { Container, WorkContent, Outer, Card} from '../components';
 
-const Merda = styled(Container)`
-    height: auto;
-    margin: 10px 0;
+const ContainerWork = styled(Container)`
+    height: 100%;
+    margin: 2rem 0;
 `;
 
-const Work = ():JSX.Element => {
-    const data = useWorkData()
-    console.log("🚀 ~ file: Work.tsx ~ line 12 ~ Work ~ title", data)
+const Work = (): JSX.Element => {
+    const data = useWorkData();
 
     return (
-        <Merda>
+        <ContainerWork>
             <WorkContent>
                 <Outer>
-                    <Card>
-                        <TitleTimeLine>Title 1</TitleTimeLine>
-                        <Text>
-                            alsndlkanlskdnlaknsdasd
-                        </Text>
-                    </Card>
-                    <Card>
-                        <TitleTimeLine>Title 2</TitleTimeLine>
-                        <Text>
-                            alsdnlasndlansldankld
-                        </Text>
-                    </Card>
+                    <Card data={data} />
                 </Outer>
             </WorkContent>
-        </Merda>
+        </ContainerWork>
     );
 };
 

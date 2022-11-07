@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Farfetch - Frontend Engineer", 
+        "dateRange": "2019-Now",
+        "description": "I have been worker in page of product at farfetch.com, I developed components for Design System. At the now I am working in new contract withGraphql. My journey have been important for incresse knowledge as developer and personalaty.", 
+        "resource": ["React", "Redux", "JavaScript", "Graphql", "Emotion", "Git", "Docker", "Jenkins"]
+    },
+    {
+        "title": "GISCON", 
+        "dateRange": "2018-2019",
+        "description": "I was the responsible person for the development of a Web platform focused on management and access control, planning and software development. I was also the responsible person for the development of tools which allow interoperability and data update between heterogeneous systems.", 
+        "resource": ["React", "Redux", "MongoDB", "Node.js", "Express", "Python"]
+    },
+    {
+        "title": "Symbiotic technology for societal eﬀiciency gains", 
+        "dateRange": "2017-2018",
+        "description":"In this project I was the responsible person for the development of the Web platform, focused and aimed to the management of users profiles in an hospital environment.", 
+        "resource":["React", "Redux", "MongoDB", "Node.js", "Express"]
+    },
+    {
+        "title": "INTELLITAG – Smart Tags", 
+        "dateRange": "2016-2017",
+        "description":"In this project I developed a reading and writting software of RFID Tags in which the purpose of it was to re-write RFID Tags that had not being coded yet. During that project I developed as well tasks focusing in the development and interoperability of a Web platform aimed to the Business Intelligence.", 
+        "resource": ["Go", "SQl", "Python"]
+    },
+    {
+        "title": "Intelligent Support System for Intensive Care Medicine", 
+        "dateRange": "2014-2015",
+        "description":"Developed a system of data collection in Python, built with many clients and a single server which communicates with an Oracle database, been the datacollected supported for the models of Data Mining developed in R.", 
+        "resource":["Python", "R", "Oracle"]
+    }
+
+    
+]
