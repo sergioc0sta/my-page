@@ -1,3 +1,3 @@
-import { SummaryContent, WorkContent } from './Content'
+import { SummaryContent, Content } from './Content'
 
-export { SummaryContent, WorkContent }
+export { SummaryContent, Content }

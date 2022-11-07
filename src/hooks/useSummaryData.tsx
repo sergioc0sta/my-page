@@ -6,7 +6,7 @@ interface SummaryDataType {
     moreInfo: string;
 }
 
-const useSummaryData = ():SummaryDataType => {
+const useSummaryData = (): SummaryDataType => {
     const data = useStaticQuery(graphql`
         query SummaryData {
             allSummaryJson {

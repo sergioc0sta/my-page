@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { useWorkData } from '../hooks';
-import { Container, WorkContent, Outer, Card} from '../components';
+import { Container, Content, Outer, Card} from '../components';
 
 const ContainerWork = styled(Container)`
     height: 100%;
@@ -12,11 +12,11 @@ const Work = (): JSX.Element => {
 
     return (
         <ContainerWork>
-            <WorkContent>
+            <Content>
                 <Outer>
                     <Card data={data} />
                 </Outer>
-            </WorkContent>
+            </Content>
         </ContainerWork>
     );
 };

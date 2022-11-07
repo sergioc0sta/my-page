@@ -432,6 +432,8 @@ type File = Node & {
   readonly changeTime: Scalars['Date'];
   /** Returns the first child node of type ImageSharp or null if there are no children of given type on this node */
   readonly childImageSharp: Maybe<ImageSharp>;
+  /** Returns the first child node of type SocialJson or null if there are no children of given type on this node */
+  readonly childSocialJson: Maybe<SocialJson>;
   /** Returns the first child node of type SummaryJson or null if there are no children of given type on this node */
   readonly childSummaryJson: Maybe<SummaryJson>;
   /** Returns the first child node of type WorkJson or null if there are no children of given type on this node */
@@ -439,6 +441,8 @@ type File = Node & {
   readonly children: ReadonlyArray<Node>;
   /** Returns all children nodes filtered by type ImageSharp */
   readonly childrenImageSharp: Maybe<ReadonlyArray<Maybe<ImageSharp>>>;
+  /** Returns all children nodes filtered by type SocialJson */
+  readonly childrenSocialJson: Maybe<ReadonlyArray<Maybe<SocialJson>>>;
   /** Returns all children nodes filtered by type SummaryJson */
   readonly childrenSummaryJson: Maybe<ReadonlyArray<Maybe<SummaryJson>>>;
   /** Returns all children nodes filtered by type WorkJson */
@@ -658,6 +662,49 @@ type FileFieldsEnum =
   | 'childImageSharp.resize.src'
   | 'childImageSharp.resize.tracedSVG'
   | 'childImageSharp.resize.width'
+  | 'childSocialJson.children'
+  | 'childSocialJson.children.children'
+  | 'childSocialJson.children.children.children'
+  | 'childSocialJson.children.children.id'
+  | 'childSocialJson.children.id'
+  | 'childSocialJson.children.internal.content'
+  | 'childSocialJson.children.internal.contentDigest'
+  | 'childSocialJson.children.internal.contentFilePath'
+  | 'childSocialJson.children.internal.description'
+  | 'childSocialJson.children.internal.fieldOwners'
+  | 'childSocialJson.children.internal.ignoreType'
+  | 'childSocialJson.children.internal.mediaType'
+  | 'childSocialJson.children.internal.owner'
+  | 'childSocialJson.children.internal.type'
+  | 'childSocialJson.children.parent.children'
+  | 'childSocialJson.children.parent.id'
+  | 'childSocialJson.description'
+  | 'childSocialJson.id'
+  | 'childSocialJson.internal.content'
+  | 'childSocialJson.internal.contentDigest'
+  | 'childSocialJson.internal.contentFilePath'
+  | 'childSocialJson.internal.description'
+  | 'childSocialJson.internal.fieldOwners'
+  | 'childSocialJson.internal.ignoreType'
+  | 'childSocialJson.internal.mediaType'
+  | 'childSocialJson.internal.owner'
+  | 'childSocialJson.internal.type'
+  | 'childSocialJson.parent.children'
+  | 'childSocialJson.parent.children.children'
+  | 'childSocialJson.parent.children.id'
+  | 'childSocialJson.parent.id'
+  | 'childSocialJson.parent.internal.content'
+  | 'childSocialJson.parent.internal.contentDigest'
+  | 'childSocialJson.parent.internal.contentFilePath'
+  | 'childSocialJson.parent.internal.description'
+  | 'childSocialJson.parent.internal.fieldOwners'
+  | 'childSocialJson.parent.internal.ignoreType'
+  | 'childSocialJson.parent.internal.mediaType'
+  | 'childSocialJson.parent.internal.owner'
+  | 'childSocialJson.parent.internal.type'
+  | 'childSocialJson.parent.parent.children'
+  | 'childSocialJson.parent.parent.id'
+  | 'childSocialJson.title'
   | 'childSummaryJson.children'
   | 'childSummaryJson.children.children'
   | 'childSummaryJson.children.children.children'
@@ -822,6 +869,50 @@ type FileFieldsEnum =
   | 'childrenImageSharp.resize.src'
   | 'childrenImageSharp.resize.tracedSVG'
   | 'childrenImageSharp.resize.width'
+  | 'childrenSocialJson'
+  | 'childrenSocialJson.children'
+  | 'childrenSocialJson.children.children'
+  | 'childrenSocialJson.children.children.children'
+  | 'childrenSocialJson.children.children.id'
+  | 'childrenSocialJson.children.id'
+  | 'childrenSocialJson.children.internal.content'
+  | 'childrenSocialJson.children.internal.contentDigest'
+  | 'childrenSocialJson.children.internal.contentFilePath'
+  | 'childrenSocialJson.children.internal.description'
+  | 'childrenSocialJson.children.internal.fieldOwners'
+  | 'childrenSocialJson.children.internal.ignoreType'
+  | 'childrenSocialJson.children.internal.mediaType'
+  | 'childrenSocialJson.children.internal.owner'
+  | 'childrenSocialJson.children.internal.type'
+  | 'childrenSocialJson.children.parent.children'
+  | 'childrenSocialJson.children.parent.id'
+  | 'childrenSocialJson.description'
+  | 'childrenSocialJson.id'
+  | 'childrenSocialJson.internal.content'
+  | 'childrenSocialJson.internal.contentDigest'
+  | 'childrenSocialJson.internal.contentFilePath'
+  | 'childrenSocialJson.internal.description'
+  | 'childrenSocialJson.internal.fieldOwners'
+  | 'childrenSocialJson.internal.ignoreType'
+  | 'childrenSocialJson.internal.mediaType'
+  | 'childrenSocialJson.internal.owner'
+  | 'childrenSocialJson.internal.type'
+  | 'childrenSocialJson.parent.children'
+  | 'childrenSocialJson.parent.children.children'
+  | 'childrenSocialJson.parent.children.id'
+  | 'childrenSocialJson.parent.id'
+  | 'childrenSocialJson.parent.internal.content'
+  | 'childrenSocialJson.parent.internal.contentDigest'
+  | 'childrenSocialJson.parent.internal.contentFilePath'
+  | 'childrenSocialJson.parent.internal.description'
+  | 'childrenSocialJson.parent.internal.fieldOwners'
+  | 'childrenSocialJson.parent.internal.ignoreType'
+  | 'childrenSocialJson.parent.internal.mediaType'
+  | 'childrenSocialJson.parent.internal.owner'
+  | 'childrenSocialJson.parent.internal.type'
+  | 'childrenSocialJson.parent.parent.children'
+  | 'childrenSocialJson.parent.parent.id'
+  | 'childrenSocialJson.title'
   | 'childrenSummaryJson'
   | 'childrenSummaryJson.children'
   | 'childrenSummaryJson.children.children'
@@ -1042,10 +1133,12 @@ type FileFilterInput = {
   readonly blocks: InputMaybe<IntQueryOperatorInput>;
   readonly changeTime: InputMaybe<DateQueryOperatorInput>;
   readonly childImageSharp: InputMaybe<ImageSharpFilterInput>;
+  readonly childSocialJson: InputMaybe<SocialJsonFilterInput>;
   readonly childSummaryJson: InputMaybe<SummaryJsonFilterInput>;
   readonly childWorkJson: InputMaybe<WorkJsonFilterInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly childrenImageSharp: InputMaybe<ImageSharpFilterListInput>;
+  readonly childrenSocialJson: InputMaybe<SocialJsonFilterListInput>;
   readonly childrenSummaryJson: InputMaybe<SummaryJsonFilterListInput>;
   readonly childrenWorkJson: InputMaybe<WorkJsonFilterListInput>;
   readonly ctime: InputMaybe<DateQueryOperatorInput>;
@@ -2032,6 +2125,7 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
+  readonly allSocialJson: SocialJsonConnection;
   readonly allSummaryJson: SummaryJsonConnection;
   readonly allWorkJson: WorkJsonConnection;
   readonly directory: Maybe<Directory>;
@@ -2043,6 +2137,7 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
+  readonly socialJson: Maybe<SocialJson>;
   readonly summaryJson: Maybe<SummaryJson>;
   readonly workJson: Maybe<WorkJson>;
 };
@@ -2120,6 +2215,14 @@ type Query_allSitePluginArgs = {
 };
 
 
+type Query_allSocialJsonArgs = {
+  filter: InputMaybe<SocialJsonFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<SocialJsonSortInput>;
+};
+
+
 type Query_allSummaryJsonArgs = {
   filter: InputMaybe<SummaryJsonFilterInput>;
   limit: InputMaybe<Scalars['Int']>;
@@ -2188,10 +2291,12 @@ type Query_fileArgs = {
   blocks: InputMaybe<IntQueryOperatorInput>;
   changeTime: InputMaybe<DateQueryOperatorInput>;
   childImageSharp: InputMaybe<ImageSharpFilterInput>;
+  childSocialJson: InputMaybe<SocialJsonFilterInput>;
   childSummaryJson: InputMaybe<SummaryJsonFilterInput>;
   childWorkJson: InputMaybe<WorkJsonFilterInput>;
   children: InputMaybe<NodeFilterListInput>;
   childrenImageSharp: InputMaybe<ImageSharpFilterListInput>;
+  childrenSocialJson: InputMaybe<SocialJsonFilterListInput>;
   childrenSummaryJson: InputMaybe<SummaryJsonFilterListInput>;
   childrenWorkJson: InputMaybe<WorkJsonFilterListInput>;
   ctime: InputMaybe<DateQueryOperatorInput>;
@@ -2322,6 +2427,16 @@ type Query_sitePluginArgs = {
   resolve: InputMaybe<StringQueryOperatorInput>;
   ssrAPIs: InputMaybe<StringQueryOperatorInput>;
   version: InputMaybe<StringQueryOperatorInput>;
+};
+
+
+type Query_socialJsonArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  description: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  title: InputMaybe<StringQueryOperatorInput>;
 };
 
 
@@ -3536,6 +3651,216 @@ type SiteSortInput = {
   readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
 };
 
+type SocialJson = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly description: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly title: Maybe<Scalars['String']>;
+};
+
+type SocialJsonConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<SocialJsonEdge>;
+  readonly group: ReadonlyArray<SocialJsonGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<SocialJson>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type SocialJsonConnection_distinctArgs = {
+  field: SocialJsonFieldsEnum;
+};
+
+
+type SocialJsonConnection_groupArgs = {
+  field: SocialJsonFieldsEnum;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type SocialJsonConnection_maxArgs = {
+  field: SocialJsonFieldsEnum;
+};
+
+
+type SocialJsonConnection_minArgs = {
+  field: SocialJsonFieldsEnum;
+};
+
+
+type SocialJsonConnection_sumArgs = {
+  field: SocialJsonFieldsEnum;
+};
+
+type SocialJsonEdge = {
+  readonly next: Maybe<SocialJson>;
+  readonly node: SocialJson;
+  readonly previous: Maybe<SocialJson>;
+};
+
+type SocialJsonFieldsEnum =
+  | 'children'
+  | 'children.children'
+  | 'children.children.children'
+  | 'children.children.children.children'
+  | 'children.children.children.id'
+  | 'children.children.id'
+  | 'children.children.internal.content'
+  | 'children.children.internal.contentDigest'
+  | 'children.children.internal.contentFilePath'
+  | 'children.children.internal.description'
+  | 'children.children.internal.fieldOwners'
+  | 'children.children.internal.ignoreType'
+  | 'children.children.internal.mediaType'
+  | 'children.children.internal.owner'
+  | 'children.children.internal.type'
+  | 'children.children.parent.children'
+  | 'children.children.parent.id'
+  | 'children.id'
+  | 'children.internal.content'
+  | 'children.internal.contentDigest'
+  | 'children.internal.contentFilePath'
+  | 'children.internal.description'
+  | 'children.internal.fieldOwners'
+  | 'children.internal.ignoreType'
+  | 'children.internal.mediaType'
+  | 'children.internal.owner'
+  | 'children.internal.type'
+  | 'children.parent.children'
+  | 'children.parent.children.children'
+  | 'children.parent.children.id'
+  | 'children.parent.id'
+  | 'children.parent.internal.content'
+  | 'children.parent.internal.contentDigest'
+  | 'children.parent.internal.contentFilePath'
+  | 'children.parent.internal.description'
+  | 'children.parent.internal.fieldOwners'
+  | 'children.parent.internal.ignoreType'
+  | 'children.parent.internal.mediaType'
+  | 'children.parent.internal.owner'
+  | 'children.parent.internal.type'
+  | 'children.parent.parent.children'
+  | 'children.parent.parent.id'
+  | 'description'
+  | 'id'
+  | 'internal.content'
+  | 'internal.contentDigest'
+  | 'internal.contentFilePath'
+  | 'internal.description'
+  | 'internal.fieldOwners'
+  | 'internal.ignoreType'
+  | 'internal.mediaType'
+  | 'internal.owner'
+  | 'internal.type'
+  | 'parent.children'
+  | 'parent.children.children'
+  | 'parent.children.children.children'
+  | 'parent.children.children.id'
+  | 'parent.children.id'
+  | 'parent.children.internal.content'
+  | 'parent.children.internal.contentDigest'
+  | 'parent.children.internal.contentFilePath'
+  | 'parent.children.internal.description'
+  | 'parent.children.internal.fieldOwners'
+  | 'parent.children.internal.ignoreType'
+  | 'parent.children.internal.mediaType'
+  | 'parent.children.internal.owner'
+  | 'parent.children.internal.type'
+  | 'parent.children.parent.children'
+  | 'parent.children.parent.id'
+  | 'parent.id'
+  | 'parent.internal.content'
+  | 'parent.internal.contentDigest'
+  | 'parent.internal.contentFilePath'
+  | 'parent.internal.description'
+  | 'parent.internal.fieldOwners'
+  | 'parent.internal.ignoreType'
+  | 'parent.internal.mediaType'
+  | 'parent.internal.owner'
+  | 'parent.internal.type'
+  | 'parent.parent.children'
+  | 'parent.parent.children.children'
+  | 'parent.parent.children.id'
+  | 'parent.parent.id'
+  | 'parent.parent.internal.content'
+  | 'parent.parent.internal.contentDigest'
+  | 'parent.parent.internal.contentFilePath'
+  | 'parent.parent.internal.description'
+  | 'parent.parent.internal.fieldOwners'
+  | 'parent.parent.internal.ignoreType'
+  | 'parent.parent.internal.mediaType'
+  | 'parent.parent.internal.owner'
+  | 'parent.parent.internal.type'
+  | 'parent.parent.parent.children'
+  | 'parent.parent.parent.id'
+  | 'title';
+
+type SocialJsonFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SocialJsonFilterListInput = {
+  readonly elemMatch: InputMaybe<SocialJsonFilterInput>;
+};
+
+type SocialJsonGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<SocialJsonEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<SocialJsonGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<SocialJson>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type SocialJsonGroupConnection_distinctArgs = {
+  field: SocialJsonFieldsEnum;
+};
+
+
+type SocialJsonGroupConnection_groupArgs = {
+  field: SocialJsonFieldsEnum;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type SocialJsonGroupConnection_maxArgs = {
+  field: SocialJsonFieldsEnum;
+};
+
+
+type SocialJsonGroupConnection_minArgs = {
+  field: SocialJsonFieldsEnum;
+};
+
+
+type SocialJsonGroupConnection_sumArgs = {
+  field: SocialJsonFieldsEnum;
+};
+
+type SocialJsonSortInput = {
+  readonly fields: InputMaybe<ReadonlyArray<InputMaybe<SocialJsonFieldsEnum>>>;
+  readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
+};
+
 type SortOrderEnum =
   | 'ASC'
   | 'DESC';
@@ -4016,6 +4341,11 @@ type GatsbyImageSharpFluid_withWebp_noBase64Fragment = { readonly aspectRatio: n
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: string | null, readonly aspectRatio: number, readonly src: string, readonly srcSet: string, readonly srcWebp: string | null, readonly srcSetWebp: string | null, readonly sizes: string };
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
+
+type SocialDataQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type SocialDataQuery = { readonly allSocialJson: { readonly edges: ReadonlyArray<{ readonly node: { readonly title: string | null, readonly description: string | null } }> } };
 
 type SummaryDataQueryVariables = Exact<{ [key: string]: never; }>;
 

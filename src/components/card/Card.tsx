@@ -25,12 +25,12 @@ const Card = ({ data }: { data: CardDataType }): JSX.Element => {
 
     return (
         <CardSection>
-            {data.map((eachOther: any) => (
-                <CardContent key={eachOther.node.title}>
-                    <TitleTimeLine>{eachOther.node.title}</TitleTimeLine>
-                    <Text>{eachOther.node.description}</Text>
+            {data.map((eachOne: CardDataType) => (
+                <CardContent key={eachOne.node.title}>
+                    <TitleTimeLine>{eachOne.node.title}</TitleTimeLine>
+                    <Text>{eachOne.node.description}</Text>
                     <div>
-                        {eachOther.node.resource.map((resource: string) => (
+                        {eachOne.node.resource.map((resource: string) => (
                             <Span key={resource}>{resource}</Span>
                         ))}
                     </div>

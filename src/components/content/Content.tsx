@@ -36,9 +36,9 @@ const SummaryContent = styled.div`
     }
 `;
 
-const WorkContent = styled(SummaryContent)`
+const Content = styled(SummaryContent)`
     border-radius: none;
     box-shadow: none;
 `;
 
-export { SummaryContent, WorkContent };
+export { SummaryContent, Content };
