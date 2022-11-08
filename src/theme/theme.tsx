@@ -5,7 +5,7 @@ const theme = {
         orange: '#f49436',
         sea: '#3bbdbd',
         red: '#e8615d',
-        primary: '#f9f4de'
+        primary: '#f9f4de',
     },
     breckPoints: {
         small: '600px',
@@ -16,7 +16,7 @@ const theme = {
     fonts: {
         primary: 'Open Sans',
         title: 'Concert One',
-    }
+    },
 };
 
 export { theme };

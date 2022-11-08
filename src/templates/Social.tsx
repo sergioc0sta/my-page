@@ -8,8 +8,6 @@ const Content = styled.div`
     flex-direction: column;
 `;
 
-
-
 const Social = (): JSX.Element => {
     const data = useSocialData();
     const [email, ...others] = data;

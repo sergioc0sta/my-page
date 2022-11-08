@@ -13,8 +13,8 @@ const useProgressBar = (): ScrollHandlerType => {
         setProgress((winScroll / height) * 100);
     };
 
-    const scrollHandler = useMemo(():number => {
-        window.onscroll = ():void => {
+    const scrollHandler = useMemo((): number => {
+        window.onscroll = (): void => {
             scrollCalc();
         };
         return progress;

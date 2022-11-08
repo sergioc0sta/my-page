@@ -3,4 +3,4 @@ import useSummaryData from './useSummaryData';
 import useWorkData from './useWorkData';
 import useSocialData from './useSocialData';
 
-export { useProgressBar, useSummaryData, useWorkData, useSocialData }
+export { useProgressBar, useSummaryData, useWorkData, useSocialData };

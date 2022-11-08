@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { useWorkData } from '../hooks';
-import { Container, Content, Outer, Card} from '../components';
+import { Container, Content, Outer, Card } from '../components';
 
 const ContainerWork = styled(Container)`
     height: 100%;

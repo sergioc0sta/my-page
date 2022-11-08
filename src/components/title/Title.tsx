@@ -7,12 +7,11 @@ const Title = styled.h1`
     font-weight: bold;
 `;
 
-
 const TitleTimeLine = styled(Title)`
     margin: 5px 0 25px 5px;
     position: relative;
     :before {
-        content: "";
+        content: '';
         position: absolute;
         width: 10px;
         height: 10px;
@@ -21,7 +20,6 @@ const TitleTimeLine = styled(Title)`
         left: -46px;
         top: 10px;
         border: 3px solid ${(props) => props.theme.colors.purple};
-      }
-
-`
-export {Title, TitleTimeLine};
+    }
+`;
+export { Title, TitleTimeLine };

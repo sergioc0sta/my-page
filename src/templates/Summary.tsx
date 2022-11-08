@@ -3,7 +3,7 @@ import { Container, SummaryContent, Title, Text } from '../components';
 import { useSummaryData } from '../hooks';
 
 const Summary = (): JSX.Element | null => {
-    const {title, description, moreInfo} = useSummaryData();
+    const { title, description, moreInfo } = useSummaryData();
 
     return (
         <Container>

@@ -5,13 +5,13 @@ interface WorkDataType {
 }
 
 interface WorkDataType__node {
-    title: string
-    dateRange: string
-    description: string
-    resource: string[]
+    title: string;
+    dateRange: string;
+    description: string;
+    resource: string[];
 }
 
-const useWorkData = ():WorkDataType => {
+const useWorkData = (): WorkDataType => {
     const data = useStaticQuery(graphql`
         query WorkData {
             allWorkJson {

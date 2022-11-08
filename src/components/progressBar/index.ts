@@ -1,4 +1,4 @@
 import { ProgressBar } from './ProgressBar';
-import { ProgressContainer} from './ProgressContainer'
+import { ProgressContainer } from './ProgressContainer';
 
-export {ProgressBar, ProgressContainer}
+export { ProgressBar, ProgressContainer };

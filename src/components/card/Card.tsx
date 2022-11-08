@@ -22,7 +22,6 @@ interface CardDataType__node {
 }
 
 const Card = ({ data }: { data: CardDataType }): JSX.Element => {
-
     return (
         <CardSection>
             {data.map((eachOne: CardDataType) => (
