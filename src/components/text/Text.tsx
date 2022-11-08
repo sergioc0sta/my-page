@@ -10,6 +10,7 @@ const Text = styled.p<TextTypes>`
     text-align: justify;
     text-justify: ${(props) => `${props?.start ? 'inter-word' : 'inither'}`};
     color: ${(props) => props.theme.colors.primary};
+    margin: 15px;
 `;
 
 export default Text;

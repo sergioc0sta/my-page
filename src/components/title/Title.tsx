@@ -5,6 +5,7 @@ const Title = styled.h1`
     font-family: ${(props) => props.theme.fonts.title};
     color: ${(props) => props.theme.colors.orange};
     font-weight: bold;
+    margin: 15px;
 `;
 
 const TitleTimeLine = styled(Title)`

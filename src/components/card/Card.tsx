@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import CardSection from './CardSection';
 import { TitleTimeLine } from '../title';
 import Text from '../text';
@@ -10,6 +11,9 @@ const CardContent = styled.div`
     border-radius: 8px;
 `;
 
+const ContentSpan = styled.div`
+    margin:0 10px
+`
 interface CardDataType {
     node: CardDataType__node;
 }
@@ -28,11 +32,11 @@ const Card = ({ data }: { data: CardDataType }): JSX.Element => {
                 <CardContent key={eachOne.node.title}>
                     <TitleTimeLine>{eachOne.node.title}</TitleTimeLine>
                     <Text>{eachOne.node.description}</Text>
-                    <div>
+                    <ContentSpan>
                         {eachOne.node.resource.map((resource: string) => (
                             <Span key={resource}>{resource}</Span>
                         ))}
-                    </div>
+                    </ContentSpan>
                 </CardContent>
             ))}
         </CardSection>

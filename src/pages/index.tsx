@@ -11,14 +11,12 @@ const IndexPage: React.FC = (): JSX.Element => {
     return (
         <ThemeProvider theme={theme}>
             <HeaderProvider>
-                <React.Fragment>
+                <Main>
                     <Header />
-                    <Main>
-                        <Summary />
-                        <Work />
-                        <Social />
-                    </Main>
-                </React.Fragment>
+                    <Summary />
+                    <Work />
+                    <Social />
+                </Main>
             </HeaderProvider>
         </ThemeProvider>
     );

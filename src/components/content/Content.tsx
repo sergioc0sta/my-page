@@ -2,8 +2,7 @@ import styled from '@emotion/styled';
 
 const SummaryContent = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: auto;
     border-radius: 20px;
     box-shadow: 10px 10px ${(props) => props.theme.colors.orange};
