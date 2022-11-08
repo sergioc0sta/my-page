@@ -5,7 +5,6 @@ interface TextTypes {
 }
 
 const Text = styled.p<TextTypes>`
-    display: block;
     text-indent: ${(props) => `${props?.start ? 30 : 0}px`};
     text-align: justify;
     text-justify: ${(props) => `${props?.start ? 'inter-word' : 'inither'}`};

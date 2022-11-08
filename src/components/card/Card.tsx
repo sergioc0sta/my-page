@@ -12,8 +12,9 @@ const CardContent = styled.div`
 `;
 
 const ContentSpan = styled.div`
-    margin:0 10px
-`
+    display: flex;
+    flex-wrap: wrap;
+`;
 interface CardDataType {
     node: CardDataType__node;
 }
