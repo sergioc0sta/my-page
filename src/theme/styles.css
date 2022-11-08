@@ -1,6 +1,4 @@
-import { injectGlobal } from '@emotion/css';
 
-injectGlobal`
 :root {
   --backgroundHeader: #634792;
   --backgroundBody: #272943;
@@ -32,4 +30,4 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-}`;
+}

@@ -5,7 +5,7 @@ import { theme } from '../theme/theme';
 import { HeaderProvider } from '../context/header';
 import { Main } from '../components';
 import { Header, Summary, Work, Social } from '../templates';
-import '../theme/styles.tsx';
+import '../theme/styles.css';
 
 const IndexPage: React.FC = (): JSX.Element => {
     return (
