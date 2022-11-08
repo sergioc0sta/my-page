@@ -2,12 +2,10 @@ import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 import { ThemeProvider } from '@emotion/react';
 import { theme } from '../theme/theme';
-import './styles.tsx';
 import { HeaderProvider } from '../context/header';
-
 import { Main } from '../components';
-
 import { Header, Summary, Work, Social } from '../templates';
+import '../theme/styles.tsx';
 
 const IndexPage: React.FC = (): JSX.Element => {
     return (

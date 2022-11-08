@@ -7,6 +7,8 @@ interface ScrollHandlerType {
 const useProgressBar = (): ScrollHandlerType => {
     const [progress, setProgress] = useState(0);
 
+    const Window = typeof window !== `undefined` ? window : { onscroll: null };
+
     const scrollCalc = () => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -14,14 +16,14 @@ const useProgressBar = (): ScrollHandlerType => {
     };
 
     const scrollHandler = useMemo((): number => {
-        window.onscroll = (): void => {
+        Window.onscroll = (): void => {
             scrollCalc();
         };
         return progress;
     }, [progress]);
 
     useEffect(() => {
-        return () => (window.onscroll = () => null);
+        return () => (Window.onscroll = () => null);
     }, []);
 
     return { scrollHandler };
