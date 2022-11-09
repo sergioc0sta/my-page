@@ -4,7 +4,7 @@ import { ThemeProvider } from '@emotion/react';
 import { theme } from '../theme/theme';
 import { HeaderProvider } from '../context/header';
 import { Main } from '../components';
-import { Header, Summary, Work, Social } from '../templates';
+import { Header, Summary, Work, Social, Seo } from '../templates';
 import '../theme/styles.css';
 
 const IndexPage: React.FC = (): JSX.Element => {
@@ -24,4 +24,4 @@ const IndexPage: React.FC = (): JSX.Element => {
 
 export default IndexPage;
 
-export const Head: HeadFC = (): JSX.Element => <title>sergioc0sta</title>;
+export const Head: HeadFC = (): JSX.Element => <Seo />

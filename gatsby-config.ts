@@ -7,8 +7,11 @@ const gatsbyRequiredRules = path.join(process.cwd(), 'node_modules', 'gatsby', '
 
 const config: GatsbyConfig = {
     siteMetadata: {
-        title: `My page`,
-        siteUrl: `https://www.yourdomain.tld`,
+        title: `SergioCosta`,
+        siteUrl: `https://sergiocosta.gatsbyjs.io`,
+        description: `My personal page with my social media, work, and a quick explanation of who I am`,
+        lang:`en`,
+        
     },
     // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
     // If you use VSCode you can also use the GraphQL plugin
@@ -23,14 +26,6 @@ const config: GatsbyConfig = {
         'gatsby-transformer-remark',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                name: 'images',
-                path: './src/images/',
-            },
-            __key: 'images',
-        },
         {
             resolve: 'gatsby-source-filesystem',
             options: {

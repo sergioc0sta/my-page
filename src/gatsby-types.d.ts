@@ -2845,6 +2845,7 @@ type SiteFieldsEnum =
   | 'polyfill'
   | 'port'
   | 'siteMetadata.description'
+  | 'siteMetadata.lang'
   | 'siteMetadata.siteUrl'
   | 'siteMetadata.title'
   | 'trailingSlash';
@@ -3636,12 +3637,14 @@ type SitePluginSortInput = {
 
 type SiteSiteMetadata = {
   readonly description: Maybe<Scalars['String']>;
+  readonly lang: Maybe<Scalars['String']>;
   readonly siteUrl: Maybe<Scalars['String']>;
   readonly title: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataFilterInput = {
   readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly lang: InputMaybe<StringQueryOperatorInput>;
   readonly siteUrl: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
