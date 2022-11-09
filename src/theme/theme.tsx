@@ -19,4 +19,15 @@ const theme = {
     },
 };
 
-export { theme };
+const themeLight = {
+    ...theme,
+    colors: {
+        purple: '#9555ff',
+        blue: '#2d9de5',
+        orange: '#f49436',
+        sea: '#3bbdbd',
+        red: '#e8615d',
+        primary: '#272943',
+    },
+};
+export { theme, themeLight };
