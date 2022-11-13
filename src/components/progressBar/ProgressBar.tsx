@@ -6,7 +6,7 @@ interface ProgressBarType {
 
 const ProgressBar = styled.div<ProgressBarType>`
     height: 100%;
-    background: ${(props) => props.theme.colors.sea};
+    background: ${(props) => props.theme.colors.progressBar};
     width: ${(props) => `${props.progress}%`};
 `;
 

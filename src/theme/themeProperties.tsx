@@ -1,11 +1,11 @@
 const theme = {
     colors: {
-        purple: '#9555ff',
-        blue: '#2d9de5',
-        orange: '#f49436',
-        sea: '#3bbdbd',
-        red: '#e8615d',
-        primary: '#f9f4de',
+        bullets: '#9555ff',
+        link: '#2d9de5',
+        heading: '#f49436',
+        progressBar: '#3bbdbd',
+        text: '#f9f4de',
+        background: '#272943',
     },
     breckPoints: {
         small: '600px',
@@ -22,12 +22,12 @@ const theme = {
 const themeLight = {
     ...theme,
     colors: {
-        purple: '#9555ff',
-        blue: '#2d9de5',
-        orange: '#f49436',
-        sea: '#3bbdbd',
-        red: '#e8615d',
-        primary: '#272943',
+        bullets: '#9555ff',
+        link: '#2d9de5',
+        heading: '#f49436',
+        progressBar: '#3bbdbd',
+        text: '#272943',
+        background: '#f9f4de',
     },
 };
 export { theme, themeLight };

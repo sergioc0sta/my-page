@@ -8,7 +8,7 @@ const Text = styled.p<TextTypes>`
     text-indent: ${(props) => `${props?.start ? 30 : 0}px`};
     text-align: justify;
     text-justify: ${(props) => `${props?.start ? 'inter-word' : 'inither'}`};
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
     margin: 15px;
 `;
 

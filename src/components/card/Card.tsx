@@ -8,7 +8,7 @@ import styled from '@emotion/styled';
 
 const CardContent = styled.div`
     margin: 0 15px 40px;
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
     border-radius: 8px;
 `;
 

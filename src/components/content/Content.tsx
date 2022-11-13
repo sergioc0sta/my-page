@@ -5,7 +5,7 @@ const SummaryContent = styled.div`
     flex-direction: column;
     height: auto;
     border-radius: 20px;
-    box-shadow: 10px 10px ${(props) => props.theme.colors.orange};
+    box-shadow: 10px 10px ${(props) => props.theme.colors.heading};
 
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: ${(props) => props.theme.breckPoints.small}) {

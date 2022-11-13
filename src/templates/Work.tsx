@@ -4,7 +4,7 @@ import { Container, Content, Outer, Card } from '../components';
 
 const ContainerWork = styled(Container)`
     height: 100%;
-    margin: 2rem 0;
+    padding: 2rem 0;
 `;
 
 const Work = (): JSX.Element => {
