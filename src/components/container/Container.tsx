@@ -6,7 +6,7 @@ const Container = styled.div`
     align-items: center;
     flex-direction: column;
     background: ${(props) => props.theme.colors.background};
-    height: var(--heightMainComponent);
+    height: 100vh;
 `;
 
 export default Container;

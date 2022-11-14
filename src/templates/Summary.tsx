@@ -1,11 +1,8 @@
 import { Container, SummaryContent, Title, Text } from '../components';
 import { useSummaryData } from '../hooks';
-import { ThemeContext } from '../context/theme';
-import { useContext } from 'react';
 
 const Summary = (): JSX.Element | null => {
     const { title, description, moreInfo } = useSummaryData();
-    const { setTheme } = useContext(ThemeContext);
 
     return (
         <Container id="summary">
@@ -15,7 +12,6 @@ const Summary = (): JSX.Element | null => {
                 <Text>
                     <a href="#work">{moreInfo}</a>
                 </Text>
-                <button onClick={setTheme}> clica </button>
             </SummaryContent>
         </Container>
     );

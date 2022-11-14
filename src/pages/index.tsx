@@ -3,7 +3,7 @@ import { HeaderProvider } from '../context/header';
 import { ThemeProvider } from '../context/theme';
 import { Main } from '../components';
 import Theme from '../theme/Theme';
-import { Header, Summary, Work, Social, Seo } from '../templates';
+import { Header, Summary, Work, Social, Seo, ThemeSelector } from '../templates';
 import '../theme/styles.css';
 
 const IndexPage: React.FC = (): JSX.Element => {
@@ -14,9 +14,9 @@ const IndexPage: React.FC = (): JSX.Element => {
                     <HeaderProvider>
                         <Header />
                     </HeaderProvider>
+                    <ThemeSelector />
                     <Summary />
                     <Work />
-
                     <Social />
                 </Main>
             </Theme>
