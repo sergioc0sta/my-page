@@ -24,4 +24,4 @@ const IndexPage: React.FC = (): JSX.Element => {
 
 export default IndexPage;
 
-export const Head: HeadFC = (): JSX.Element => <Seo />
+export const Head: HeadFC = (): JSX.Element => <Seo />;

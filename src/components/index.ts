@@ -9,6 +9,7 @@ import Outer from './outer';
 import Card from './card';
 import Link from './link';
 import ListItem from './listItem';
+import Date from './date';
 
 export {
     ListItem,
@@ -25,4 +26,5 @@ export {
     Title,
     SummaryContent,
     Container,
+    Date,
 };

@@ -10,8 +10,7 @@ const config: GatsbyConfig = {
         title: `SergioCosta`,
         siteUrl: `https://sergiocosta.gatsbyjs.io`,
         description: `My personal page with my social media, work, and a quick explanation of who I am`,
-        lang:`en`,
-        
+        lang: `en`,
     },
     // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
     // If you use VSCode you can also use the GraphQL plugin

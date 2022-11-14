@@ -10,7 +10,9 @@ const Summary = (): JSX.Element | null => {
             <SummaryContent>
                 <Title>{title}</Title>
                 <Text start>{description}</Text>
-                <Text>{moreInfo}</Text>
+                <Text>
+                    <a href="#work">{moreInfo}</a>
+                </Text>
             </SummaryContent>
         </Container>
     );

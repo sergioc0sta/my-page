@@ -12,6 +12,18 @@
         "resource": ["React", "Redux", "MongoDB", "Node.js", "Express", "Python"]
     },
     {
+        "title": "Assistant Professor (Invited) - ESMAD",
+        "dateRange": "2018",
+        "description": "I was Teacher in ESMAD in 2 curricular units: Web Developer and Project, to the 2nd year of degree in Tecnologies and Information Sistems to the Web.",
+        "resource": ["Node.js", "Express", "MongoDB", "UML"]
+    },
+    {
+        "title": "Program Qualifica-IT Universidade do Minho",
+        "dateRange": "2018",
+        "description": "I’ve also played the role as a trainer in the program Qualifica-IT on the curricular unit of Web Development.",
+        "resource": ["PHP", "SQL"]
+    },
+    {
         "title": "Symbiotic technology for societal eﬀiciency gains",
         "dateRange": "2017-2018",
         "description": "In this project I was the responsible person for the development of the Web platform, focused and aimed to the management of users profiles in an hospital environment.",
