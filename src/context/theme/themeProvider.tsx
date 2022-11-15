@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ThemeContext } from './themeContext';
 
-const ThemeProvider = ({ children }) => {
+const ThemeProvider = ({ children }: {children: React.ReactNode}): JSX.Element => {
     const [isDarkTheme, setDarkTheme] = useState(true);
 
-    const setTheme = () => {
+    const setTheme = ():void => {
         setDarkTheme((prev) => !prev);
     };
 

@@ -1,9 +1,9 @@
-import { theme, themeLight } from './themeProperties';
-import { useContext } from 'react';
-import { ThemeContext } from '../context/theme';
+import React, { useContext } from 'react';
 import { ThemeProvider } from '@emotion/react';
+import { theme, themeLight } from './themeProperties';
+import { ThemeContext } from '../context/theme';
 
-const Theme = ({ children }) => {
+const Theme = ({ children }:{children: React.ReactNode}): JSX.Element => {
     const { isDarkTheme } = useContext(ThemeContext);
     const themeSelect = isDarkTheme ? theme : themeLight;
 
