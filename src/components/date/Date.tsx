@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 const DateStyle = styled(Text)`
     text-align: right;
     color: ${(props) => props.theme.colors.primary};
+    transition: color ${(props) => props.theme.transition.time};
     font-style: italic;
     font-size: 14px;
 `;

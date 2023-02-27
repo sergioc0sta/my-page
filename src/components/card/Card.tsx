@@ -9,6 +9,7 @@ import styled from '@emotion/styled';
 const CardContent = styled.div`
     margin: 0 15px 40px;
     color: ${(props) => props.theme.colors.text};
+    transition: color ${(props) => props.theme.transition.time};
     border-radius: 8px;
 `;
 

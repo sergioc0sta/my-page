@@ -7,6 +7,7 @@ const Container = styled.div`
     flex-direction: column;
     background: ${(props) => props.theme.colors.background};
     height: 100vh;
+    transition: background ${(props) => props.theme.transition.time};
 `;
 
 export default Container;

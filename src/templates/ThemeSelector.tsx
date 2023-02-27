@@ -1,7 +1,6 @@
-import {Button, ButtonContainer} from '../components'
+import { Button, ButtonContainer } from '../components';
 
 const ThemeSelector = (): JSX.Element => {
-    
     return (
         <ButtonContainer>
             <Button />

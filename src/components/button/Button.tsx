@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 const StyleButton = styled.button`
     margin: 15px;
     background: ${(props) => props.theme.colors.background};
+    transition: background ${(props) => props.theme.transition.time};
     border: none;
     cursor: pointer;
     font-size: 20px;

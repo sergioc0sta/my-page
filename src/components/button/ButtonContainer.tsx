@@ -5,7 +5,8 @@ const ButtonContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: right;
-    background: ${(props) => props.theme.colors.background};;
+    background: ${(props) => props.theme.colors.background};
+    transition: background ${(props) => props.theme.transition.time};
     position: absolute;
 `;
 

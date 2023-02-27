@@ -3,7 +3,7 @@ import { ThemeProvider } from '@emotion/react';
 import { theme, themeLight } from './themeProperties';
 import { ThemeContext } from '../context/theme';
 
-const Theme = ({ children }:{children: React.ReactNode}): JSX.Element => {
+const Theme = ({ children }: { children: React.ReactNode }): JSX.Element => {
     const { isDarkTheme } = useContext(ThemeContext);
     const themeSelect = isDarkTheme ? theme : themeLight;
 

@@ -17,6 +17,9 @@ const theme = {
         primary: 'Open Sans',
         title: 'Concert One',
     },
+    transition: {
+        time: '0.7s',
+    },
 };
 
 const themeLight = {
