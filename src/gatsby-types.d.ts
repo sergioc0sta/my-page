@@ -1735,7 +1735,7 @@ type Query_summaryJsonArgs = {
 
 type Query_workJsonArgs = {
   children: InputMaybe<NodeFilterListInput>;
-  dateRange: InputMaybe<DateQueryOperatorInput>;
+  dateRange: InputMaybe<StringQueryOperatorInput>;
   description: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
@@ -3374,21 +3374,13 @@ type SummaryJsonSortInput = {
 
 type WorkJson = Node & {
   readonly children: ReadonlyArray<Node>;
-  readonly dateRange: Maybe<Scalars['Date']>;
+  readonly dateRange: Maybe<Scalars['String']>;
   readonly description: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
   readonly parent: Maybe<Node>;
   readonly resource: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly title: Maybe<Scalars['String']>;
-};
-
-
-type WorkJson_dateRangeArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
 };
 
 type WorkJsonConnection = {
@@ -3537,7 +3529,7 @@ type WorkJsonFieldsEnum =
 
 type WorkJsonFilterInput = {
   readonly children: InputMaybe<NodeFilterListInput>;
-  readonly dateRange: InputMaybe<DateQueryOperatorInput>;
+  readonly dateRange: InputMaybe<StringQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
