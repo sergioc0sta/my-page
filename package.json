@@ -17,9 +17,9 @@
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\""
   },
   "dependencies": {
-    "@emotion/css": "^11.10.5",
+    "@emotion/css": "^11.11.2",
     "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@emotion/styled": "^11.11.0",
     "@types/react-helmet": "^6.1.5",
     "gatsby": "^4.24.7",
     "gatsby-omni-font-loader": "^2.0.2",
