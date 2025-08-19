@@ -17,7 +17,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\""
   },
   "dependencies": {
-    "@emotion/css": "^11.10.5",
+    "@emotion/css": "^11.13.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@types/react-helmet": "^6.1.5",
