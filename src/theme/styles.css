@@ -1,31 +1,41 @@
-:root {
-  --backgroundHeader: #634792;
-  --backgroundBody: #272943;
-  --heightHeader: 10vh;
-  --heightMainComponent: 100vh;
-  --widthxs: 600px;
-  --widths: 900px;
-  --widthm: 1200px;
-  --widthxl: 1800;
-}
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  overflow-y: scroll;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply box-border scroll-smooth;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    overflow-y: scroll;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 bg-paper font-sans text-ink antialiased transition-colors duration-500 dark:bg-slate-950 dark:text-slate-100;
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
+  }
+
+  a {
+    @apply text-inherit;
+  }
 }
 
-body {
-  font-weight: normal;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #f2f2f2;
-  font-family: 'Open Sans';
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+@layer components {
+  .page-section {
+    @apply flex min-h-screen w-full items-center justify-center px-6 py-20 sm:px-10;
+  }
+
+  .section-inner {
+    @apply w-full max-w-4xl;
+  }
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, ButtonContainer } from '../components';
 
 const ThemeSelector = (): JSX.Element => {

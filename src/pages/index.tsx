@@ -1,9 +1,9 @@
+import React from 'react';
 import type { HeadFC } from 'gatsby';
-import { HeaderProvider } from '../context/header';
 import { ThemeProvider } from '../context/theme';
 import { Main } from '../components';
 import Theme from '../theme/Theme';
-import { Header, Summary, Work, Social, Seo, ThemeSelector } from '../templates';
+import { Summary, Work, Social, Seo, ThemeSelector, SectionIndicator } from '../templates';
 import '../theme/styles.css';
 
 const IndexPage: React.FC = (): JSX.Element => {
@@ -11,10 +11,8 @@ const IndexPage: React.FC = (): JSX.Element => {
         <ThemeProvider>
             <Theme>
                 <Main>
-                    <HeaderProvider>
-                        <Header />
-                    </HeaderProvider>
                     <ThemeSelector />
+                    <SectionIndicator />
                     <Summary />
                     <Work />
                     <Social />

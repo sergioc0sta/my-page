@@ -1,9 +1,9 @@
 {
-  "name": "my-page",
+  "name": "sco",
   "version": "1.0.0",
   "private": true,
-  "description": "my-page",
-  "author": "kostyny",
+  "description": "sco",
+  "author": "sco",
   "keywords": [
     "gatsby"
   ],
@@ -17,13 +17,10 @@
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\""
   },
   "dependencies": {
-    "@emotion/css": "^11.10.5",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@types/react-helmet": "^6.1.5",
     "gatsby": "^4.24.7",
     "gatsby-omni-font-loader": "^2.0.2",
-    "gatsby-plugin-emotion": "^7.24.0",
+    "gatsby-plugin-postcss": "^5.24.0",
     "gatsby-plugin-sitemap": "^5.24.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-json": "^4.24.0",
@@ -44,7 +41,10 @@
     "eslint-webpack-plugin": "^3.2.0",
     "gatsby-plugin-eslint": "^4.0.2",
     "gatsby-plugin-prettier-eslint": "^1.0.6",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
     "prettier": "^2.7.1",
+    "tailwindcss": "^3.4.17",
     "typescript": "^4.8.4"
   }
 }

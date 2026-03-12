@@ -1,20 +1,18 @@
-import Text from '../text';
-import styled from '@emotion/styled';
-
-const DateStyle = styled(Text)`
-    text-align: right;
-    color: ${(props) => props.theme.colors.primary};
-    transition: color ${(props) => props.theme.transition.time};
-    font-style: italic;
-    font-size: 14px;
-`;
+import React from 'react';
 
 type DateType = {
     dateRange: string;
+    className?: string;
 };
 
-const Date = ({ dateRange }: DateType): JSX.Element => {
-    return <DateStyle>{dateRange}</DateStyle>;
+const Date = ({ dateRange, className = '' }: DateType): JSX.Element => {
+    return (
+        <p
+            className={`m-0 text-right text-base font-semibold uppercase tracking-wide text-slate-500 transition-colors duration-500 dark:text-slate-400 sm:text-lg ${className}`.trim()}
+        >
+            {dateRange}
+        </p>
+    );
 };
 
 export default Date;

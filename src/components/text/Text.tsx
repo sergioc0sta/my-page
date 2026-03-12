@@ -1,16 +1,21 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-interface TextTypes {
+interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
     start?: boolean;
+    children: React.ReactNode;
 }
 
-const Text = styled.p<TextTypes>`
-    text-indent: ${(props) => `${props?.start ? 30 : 0}px`};
-    text-align: justify;
-    text-justify: ${(props) => `${props?.start ? 'inter-word' : 'inither'}`};
-    color: ${(props) => props.theme.colors.text};
-    transition: color ${(props) => props.theme.transition.time};
-    margin: 15px;
-`;
+const Text = ({ start, children, className = '', ...rest }: TextProps): JSX.Element => {
+    return (
+        <p
+            className={`m-0 text-lg leading-relaxed text-slate-700 transition-colors duration-500 dark:text-slate-300 sm:text-xl ${
+                start ? 'indent-8' : ''
+            } ${className}`.trim()}
+            {...rest}
+        >
+            {children}
+        </p>
+    );
+};
 
 export default Text;

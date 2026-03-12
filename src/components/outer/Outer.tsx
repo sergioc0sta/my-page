@@ -1,13 +1,15 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const Outer = styled.div`
-    border-left: 3px dashed ${(props) => props.theme.colors.bullets};
-    display: flex;
-    flex-direction: column;
+interface OuterProps extends React.HTMLAttributes<HTMLDivElement> {
+    children: React.ReactNode;
+}
 
-    @media only screen and (max-width: ${(props) => props.theme.breckPoints.small}) {
-        border-left: none;
-    }
-`;
+const Outer = ({ children, className = '', ...rest }: OuterProps): JSX.Element => {
+    return (
+        <div className={`flex flex-col pl-6 sm:pl-8 ${className}`.trim()} {...rest}>
+            {children}
+        </div>
+    );
+};
 
 export default Outer;

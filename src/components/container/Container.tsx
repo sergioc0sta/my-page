@@ -1,13 +1,15 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: ${(props) => props.theme.colors.background};
-    height: 100vh;
-    transition: background ${(props) => props.theme.transition.time};
-`;
+interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+    children: React.ReactNode;
+}
+
+const Container = ({ children, className = '', ...rest }: ContainerProps): JSX.Element => {
+    return (
+        <section className={`page-section ${className}`.trim()} {...rest}>
+            <div className="section-inner">{children}</div>
+        </section>
+    );
+};
 
 export default Container;

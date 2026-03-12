@@ -1,8 +1,18 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const Link = styled.a`
-    color: ${(props) => props.theme.colors.link};
-    transition: color ${(props) => props.theme.transition.time};
-`;
+interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+    children: React.ReactNode;
+}
+
+const Link = ({ children, className = '', ...rest }: LinkProps): JSX.Element => {
+    return (
+        <a
+            className={`font-semibold underline decoration-2 underline-offset-4 transition-colors duration-300 hover:text-accent dark:hover:text-orange-300 ${className}`.trim()}
+            {...rest}
+        >
+            {children}
+        </a>
+    );
+};
 
 export default Link;

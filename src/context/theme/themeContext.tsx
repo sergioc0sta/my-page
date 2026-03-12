@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 interface ThemeContextType {
     isDarkTheme: boolean;
-    setTheme(name: boolean): any;
+    setTheme(): void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
