@@ -9,7 +9,7 @@ interface SocialDataType__node {
     title: string;
 }
 
-const useSocialData = (): SocialDataType => {
+const useSocialData = (): SocialDataType[] => {
     const data = useStaticQuery(graphql`
         query SocialData {
             allSocialJson {

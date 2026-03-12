@@ -1,4 +1,3 @@
-import { ProgressBar, ProgressContainer } from './progressBar';
 import Main from './main';
 import Social from './social';
 import Text from './text';
@@ -19,8 +18,6 @@ export {
     TitleTimeLine,
     Card,
     Outer,
-    ProgressBar,
-    ProgressContainer,
     Main,
     Social,
     Text,

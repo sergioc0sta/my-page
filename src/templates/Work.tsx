@@ -1,23 +1,18 @@
-import styled from '@emotion/styled';
+import React from 'react';
 import { useWorkData } from '../hooks';
 import { Container, Content, Outer, Card } from '../components';
-
-const ContainerWork = styled(Container)`
-    height: 100%;
-    padding: 2rem 0;
-`;
 
 const Work = (): JSX.Element => {
     const data = useWorkData();
 
     return (
-        <ContainerWork id="work">
+        <Container id="work">
             <Content>
                 <Outer>
                     <Card data={data} />
                 </Outer>
             </Content>
-        </ContainerWork>
+        </Container>
     );
 };
 

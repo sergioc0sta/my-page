@@ -2,18 +2,30 @@ import React, { useEffect, useState } from 'react';
 import { ThemeContext } from './themeContext';
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }): JSX.Element => {
-    const initialState =
-        typeof window !== `undefined` ? (localStorage.getItem('theme-mode') === 'dark' ? true : false) : false;
-
-    const [isDarkTheme, setDarkTheme] = useState(initialState);
+    const [isDarkTheme, setDarkTheme] = useState(false);
+    const [isThemeReady, setThemeReady] = useState(false);
 
     const setTheme = (): void => {
         setDarkTheme((prev) => !prev);
     };
 
     useEffect((): void => {
+        if (typeof window === 'undefined') {
+            return;
+        }
+
+        const storedMode = localStorage.getItem('theme-mode');
+        setDarkTheme(storedMode === 'dark');
+        setThemeReady(true);
+    }, []);
+
+    useEffect((): void => {
+        if (typeof window === 'undefined' || !isThemeReady) {
+            return;
+        }
+
         localStorage.setItem('theme-mode', isDarkTheme ? 'dark' : 'light');
-    }, [isDarkTheme]);
+    }, [isDarkTheme, isThemeReady]);
 
     return <ThemeContext.Provider value={{ isDarkTheme, setTheme }}>{children}</ThemeContext.Provider>;
 };

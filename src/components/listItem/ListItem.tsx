@@ -1,9 +1,18 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const ListItem = styled.li`
-    color: ${(props) => props.theme.colors.bullets};
-    transition: color ${(props) => props.theme.transition.time};
-    padding: 5px 0;
-`;
+interface ListItemProps extends React.LiHTMLAttributes<HTMLLIElement> {
+    children: React.ReactNode;
+}
+
+const ListItem = ({ children, className = '', ...rest }: ListItemProps): JSX.Element => {
+    return (
+        <li
+            className={`list-disc py-1 marker:text-accent dark:marker:text-orange-300 ${className}`.trim()}
+            {...rest}
+        >
+            {children}
+        </li>
+    );
+};
 
 export default ListItem;

@@ -1,10 +1,15 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const CardSection = styled.div`
-    margin: 0 15px 0;
-    color: ${(props) => props.theme.colors.text};
-    transition: color ${(props) => props.theme.transition.time};
-    border-radius: 8px;
-`;
+interface CardSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+    children: React.ReactNode;
+}
+
+const CardSection = ({ children, className = '', ...rest }: CardSectionProps): JSX.Element => {
+    return (
+        <div className={`flex flex-col gap-10 ${className}`.trim()} {...rest}>
+            {children}
+        </div>
+    );
+};
 
 export default CardSection;

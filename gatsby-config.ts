@@ -6,9 +6,10 @@ import path from 'path';
 const gatsbyRequiredRules = path.join(process.cwd(), 'node_modules', 'gatsby', 'dist', 'utils', 'eslint-rules');
 
 const config: GatsbyConfig = {
+    pathPrefix: `/sco`,
     siteMetadata: {
         title: `SergioCosta`,
-        siteUrl: `https://sergiocosta.gatsbyjs.io`,
+        siteUrl: `https://sergioc0sta.github.io/sco`,
         description: `My personal page with my social media, work, and a quick explanation of who I am`,
         lang: `en`,
     },
@@ -19,7 +20,7 @@ const config: GatsbyConfig = {
     plugins: [
         'gatsby-transformer-json',
         'gatsby-transformer-remark',
-        'gatsby-plugin-emotion',
+        'gatsby-plugin-postcss',
         'gatsby-plugin-sitemap',
         'gatsby-transformer-remark',
         {
@@ -57,12 +58,8 @@ const config: GatsbyConfig = {
                 preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
                 web: [
                     {
-                        name: `Concert One`,
-                        file: `https://fonts.googleapis.com/css2?family=Concert+One&display=swap`,
-                    },
-                    {
                         name: `Open Sans`,
-                        file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap`,
+                        file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap`,
                     },
                 ],
             },

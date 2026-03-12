@@ -1,28 +1,29 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const Title = styled.h1`
-    font-size: 30px;
-    font-family: ${(props) => props.theme.fonts.title};
-    color: ${(props) => props.theme.colors.heading};
-    transition: color ${(props) => props.theme.transition.time};
-    font-weight: bold;
-    margin: 15px;
-`;
+interface TitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
+    children: React.ReactNode;
+}
 
-const TitleTimeLine = styled(Title)`
-    margin: 5px 0 25px 5px;
-    position: relative;
-    :before {
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background: ${(props) => props.theme.colors.bullets};
-        transition: background ${(props) => props.theme.transition.time};
-        border-radius: 360px;
-        left: -46px;
-        top: 10px;
-        border: 3px solid ${(props) => props.theme.colors.bullets};
-    }
-`;
+const Title = ({ children, className = '', ...rest }: TitleProps): JSX.Element => {
+    return (
+        <h1
+            className={`m-0 text-5xl font-extrabold tracking-tight text-slate-900 transition-colors duration-500 dark:text-slate-100 sm:text-6xl ${className}`.trim()}
+            {...rest}
+        >
+            {children}
+        </h1>
+    );
+};
+
+const TitleTimeLine = ({ children, className = '', ...rest }: TitleProps): JSX.Element => {
+    return (
+        <h2
+            className={`relative m-0 pl-6 text-3xl font-bold text-slate-900 transition-colors duration-500 before:absolute before:left-0 before:top-3 before:h-2 before:w-2 before:rounded-full before:bg-accent before:content-[''] dark:text-slate-100 dark:before:bg-orange-300 sm:text-4xl ${className}`.trim()}
+            {...rest}
+        >
+            {children}
+        </h2>
+    );
+};
+
 export { Title, TitleTimeLine };

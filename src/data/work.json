@@ -1,5 +1,60 @@
 [
     {
+        "title": "Exeedme - Senior Software Engineer",
+        "dateRange": "2025",
+        "description": "As a Senior Software Developer, I lead the design and development of scalable Web3 solutions, with a strong focus on NFT marketplace architecture and blockchain technology integration. I ensure architectural consistency and code quality across multiple projects, defining technical standards, optimizing deployment pipelines, and guiding key technology decisions. My role bridges business requirements and technical execution, promoting best practices, innovation, and a culture of continuous improvement within the engineering team.",
+        "resource": [
+            "GraphQL",
+            "TypeScript",
+            "React",
+            "Tailwind",
+            "Next.js",
+            "Vite",
+            "Express.js",
+            "Go",
+            "Fastify",
+            "GitHub Webhooks",
+            "MongoDB",
+            "Postgres",
+            "Redis"
+        ]
+    },
+    {
+        "title": "Ceiia - Software Engineer",
+        "dateRange": "2024-2025",
+        "description": "I was responsible for frontend development and for aligning the client's requirements with the lead to prioritize tasks. I also handled UI/UX design. As a software engineer, I made decisions regarding technology selection, deployment processes, development environments, and standards definition. The technological solution supported a platform responsible for tracking, configuration, firmware updates, and sending commands to vehicle devices, while also displaying telemetric data.",
+        "resource": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Tailwind",
+            "Zod",
+            "Next.js",
+            "Express.js",
+            "Turborepo",
+            "GitLab Webhooks"
+        ]
+    },
+    {
+        "title": "Universidade do Minho - Researcher",
+        "dateRange": "2023-2024",
+        "description": "I developed a solution to address a real problem in the healthcare sector focused on managing work teams, their professionals, and respective skills. My work involved design, implementation, and planning across multiple project phases. Initial tasks included data model and ETL process design, followed by frontend and backend development with scalability, performance, and user experience as core priorities.",
+        "resource": [
+            "React",
+            "Tailwind",
+            "Next.js",
+            "GraphQL",
+            "Apollo Client",
+            "Apollo Server",
+            "Express.js",
+            "JavaScript",
+            "TypeScript",
+            "Oracle DB",
+            "GitHub",
+            "Docker"
+        ]
+    },
+    {
         "title": "Farfetch - Frontend Engineer",
         "dateRange": "2019-2022",
         "description": "At farfetch.com, where I worked on the product page, I created components for the Design System. I am currently work with Graphql under a new contract. My journey have been important for incresse knowledge as developer and personalaty.",

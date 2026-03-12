@@ -11,7 +11,7 @@ interface WorkDataType__node {
     resource: string[];
 }
 
-const useWorkData = (): WorkDataType => {
+const useWorkData = (): WorkDataType[] => {
     const data = useStaticQuery(graphql`
         query WorkData {
             allWorkJson {

@@ -1,23 +1,9 @@
-/* eslint-disable react/no-unknown-property */
+import React from 'react';
 import CardSection from './CardSection';
 import { TitleTimeLine } from '../title';
 import Date from '../date';
 import Text from '../text';
 import Span from '../span';
-import styled from '@emotion/styled';
-
-const CardContent = styled.div`
-    margin: 0 15px 40px;
-    color: ${(props) => props.theme.colors.text};
-    transition: color ${(props) => props.theme.transition.time};
-    border-radius: 8px;
-`;
-
-const ContentSpan = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 10px;
-`;
 interface CardDataType {
     node: CardDataType__node;
 }
@@ -29,20 +15,25 @@ interface CardDataType__node {
     resource: string[];
 }
 
-const Card = ({ data }: { data: CardDataType }): JSX.Element => {
+const Card = ({ data }: { data: CardDataType[] }): JSX.Element => {
     return (
         <CardSection>
             {data.map((eachOne: CardDataType) => (
-                <CardContent key={eachOne.node.title}>
-                    <TitleTimeLine>{eachOne.node.title}</TitleTimeLine>
-                    <Date dateRange={eachOne.node.dateRange} />
-                    <Text>{eachOne.node.description}</Text>
-                    <ContentSpan>
+                <article
+                    key={eachOne.node.title}
+                    className="flex flex-col pb-10 last:pb-0"
+                >
+                    <div className="flex flex-col gap-1.5">
+                        <TitleTimeLine>{eachOne.node.title}</TitleTimeLine>
+                        <Date dateRange={eachOne.node.dateRange} />
+                        <Text>{eachOne.node.description}</Text>
+                    </div>
+                    <div className="mt-2 flex flex-wrap gap-2">
                         {eachOne.node.resource.map((resource: string) => (
                             <Span key={resource}>{resource}</Span>
                         ))}
-                    </ContentSpan>
-                </CardContent>
+                    </div>
+                </article>
             ))}
         </CardSection>
     );
